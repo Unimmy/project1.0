@@ -28,6 +28,8 @@ $(function(){
                `
             }
             $(".images1").append(html)
+            
         }
     })
+   
     })

@@ -1,3 +1,10 @@
 .my_img_div1{
     border-top:3px solid #FFA800;
 }
+.images1>div>a{
+    opacity: 0.5;
+}
+.images1>div>a:hover {
+    transition: all 0.5s linear 0s ;
+    opacity: 1;
+}
