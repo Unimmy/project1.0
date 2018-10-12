@@ -1,0 +1,9 @@
+.my_bg_img{
+    background:url("../images/info_bg.jpg") no-repeat;
+    height: 309px;
+    position: relative;
+    left:100px;
+}
+input{
+    width: 235px;
+}

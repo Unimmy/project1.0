@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>轮播图1</title>
+                <style>
+                        .banner{overflow:hidden;position:relative;border:4px solid #f00;width:1000px;}
+                        .banner ul{margin:0;padding:0;list-style:none;}
+                        .banner .list li{float:left;}
+                        .banner .list img{display:block;width:100%;}
+                        
+                        .icos{position:absolute;z-index:1;left:50%;bottom:14px;}
+                        .icos li{text-indent:-9999px;background:#ccc;width:12px;height:12px;float:left;margin:0 5px;border-radius:100%;}
+                        .icos li.on{background:#f00;}
+                </style>
+        </head>
+        <body>
+                <div class="banner">
+                        <ul class="list">
+                                <li><img src="images/01.jpg"></li>
+                                <li><img src="images/02.jpg"></li>
+                                <li><img src="images/03.jpg"></li>
+                        </ul>
+                        <ul class="icos">
+                                <li class="on">0</li>
+                                <li>1</li>
+                                <li>2</li>
+                        </ul>
+                </div>
+                
+                <script>
+                        window.onload=function(){
+                                //获取所有元素
+                                var list=document.querySelector('.list');
+                                // console.log(list)
+                                var icos=document.querySelectorAll('.icos li');
+                                var li=document.querySelectorAll('.list li');
+                                console.log(li)
+                                var len=li.length; //一共几张图
+                                var li_width=document.querySelector('.banner').clientWidth; //每张图的宽度
+                                list.innerHTML=list.innerHTML+list.innerHTML; //在列表最后添加一份，在展示最后一张切到第一张时实际展示的是刚添加的这张
+                                li=document.querySelectorAll('.list li'); //重新获取所有节点
+                                
+                                //为每一个li设置宽度
+                                for(var i=0;i<li.length;i++){
+                                        li[i].style.width=li_width+'px';
+                                }
+                                list.style.width=li_width*li.length+"px"; //设置总宽度，让所有图片在一行显示
+                                
+                                //给每一个按钮绑定事件
+                                for(var i=0; i<icos.length; i++){
+                                        icos[i].onmouseover=function(){ //鼠标移到小图标上时取消自动播放并切换到指定的图片上
+                                                clearInterval(timeId);
+                                                show(this.innerText);
+                                        }
+                                        icos[i].onmouseout=function(){ //鼠标移开时继续自动播放
+                                                autoplay();
+                                        }
+                                }
+                                
+                                //通过偏移实现动画
+                                function show(n){
+                                        if(n==1){ //这个判断顺序很关键，必须放在上面，实现最后一张瞬间切回第一张，再转到第二张
+                                                list.style.marginLeft='0px';
+                                        }
+                                        /*
+                                        默认出现第1张
+                                        n=1        动画出现第二张，第一张消失
+                                        n=2        动画出现第三张，第二张消失
+                                        n=0        动画出现第四张（第一张的复制），第三张消失
+                                        n=1        瞬间切回第一张（由于第一张和第四张相同，肉眼看不出变化），再动画出现第二张，第一张消失
+                                        */
+                                        
+                                        var w=n>0 ? -(n-1)*li_width : -(len-1)*li_width; //计算偏移量，以实现动画效果，等于0时特殊处理，展示手动加的那一张
+                                        var step=20; //步长可根据宽度计算得到
+                                        var i=step;
+                                        var timer=setInterval(function(){
+                                                list.style.marginLeft=(w-i)+'px';
+                                                i+=step;
+                                                if(i>li_width){ //显示完一张图就停止
+                                                        clearInterval(timer);
+                                                }
+                                        },20);
+                                        
+                                        //改变按钮状态
+                                        for(var j=0; j<icos.length; j++){
+                                                if(n==j){
+                                                        icos[j].className='on';
+                                                }else{
+                                                        icos[j].className='';
+                                                }
+                                        }
+                                }
+                                
+                                //自动播放函数
+                                function autoplay(){
+                                        var count=1; //初始是第1张，自动播放从第2张开始
+                                        timeId=setInterval(function(){
+                                                show(count % len); //取余数实现轮流播放
+                                                count++;
+                                        },3000);
+                                }
+                                
+                                autoplay();
+                        }
+                </script>
+        </body>
+</html>

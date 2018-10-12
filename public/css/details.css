@@ -1,0 +1,28 @@
+.inputs{
+    height: 50px;
+}
+.inputbg{
+    background: url("../images/sousuo.jpg") no-repeat;
+    width:275px;
+    height: 25px;
+    position: relative;
+    left: 200px
+}
+.inputbg>input{
+    position: relative;
+    left:-15px;
+    top: -8px;
+    background:transparent;
+    border:0;
+    outline: none;
+}
+.inputbg input[type=text]{
+    padding-left:10px; 
+   width:205px;
+   height: 25px;
+}
+.inputbg input[type=button]{
+    width:70px;
+    height: 25px;
+   cursor: pointer;
+ }

@@ -1,0 +1,5 @@
+.container .my_bg_img{
+    background:url("../images/about_02.jpg") no-repeat;
+   position: relative;
+    left:78px;
+}

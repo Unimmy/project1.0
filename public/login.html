@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+   <div class="loginbg">
+         <div class="imgs">
+          <ul>
+              <li ><a href="#b1" data-target="#b1"><img src="images/1 (1).jpg" ></a></li>
+              <li ><a href="#b2" data-target="#b2"><img src="images/2 (1).jpg" ></a></li>
+              <li ><a href="#b3" data-target="#b3"><img src="images/3 (1).jpg"  ></a></li>
+              <li><a href="#b4" data-target="#b4"><img src="images/4 (1).jpg" ></a></li>
+          </ul>
+         </div>
+        <div>
+       <div class="bg1" id="b1">
+           <form name="formLogin" action="#" method="post">
+               <p>帐 号 &nbsp; <input name="username" type="text"  class="inputBg" /></p>
+               <p style="margin-bottom:5px;">密 码 &nbsp; <input name="password" type="password"   class="inputBg"/></p>
+               <p style="margin-bottom:5px;"> <input type="checkbox" value="1" name="remember" id="remember" /><label for="remember"> 请保存我这次的登录信息。</label></p>
+               <p><input type="hidden" name="act" value="act_login" />
+                   <input type="hidden" name="back_act" value="./user.php" />
+                   <input type="submit" name="submit" value="登录" class="us_Submit"/> &nbsp; &nbsp;
+                   <input type="button" name="button" value="重置" class="us_Submit"  /></p>
+           </form>
+       </div>
+       <div class="bg2" id="b2">
+           <form name="formLogin" action="#" method="post">
+               <p>帐 号 &nbsp; <input name="username" type="text"  class="inputBg" /></p>
+               <p style="margin-bottom:5px;">密 码 &nbsp; <input name="password" type="password"   class="inputBg"/></p>
+               <p style="margin-bottom:5px;"> <input type="checkbox" value="1" name="remember" /><label for="remember"> 请保存我这次的登录信息。</label></p>
+               <p><input type="hidden" name="act" value="act_login" />
+                   <input type="hidden" name="back_act" value="./user.php" />
+                   <input type="submit" name="submit" value="登录" class="us_Submit"  /> &nbsp; &nbsp;
+                   <input type="button" name="button" value="重置" class="us_Submit" /></p>
+           </form>
+       </div>
+       <div class="bg3" id="b3">
+           <form name="formLogin" action="#" method="post">
+               <p>帐 号 &nbsp; <input name="username" type="text"  class="inputBg" /></p>
+               <p style="margin-bottom:5px;">密 码 &nbsp; <input name="password" type="password"   class="inputBg"/></p>
+               <p style="margin-bottom:5px;"> <input type="checkbox" value="1" name="remember" /><label for="remember"> 请保存我这次的登录信息。</label></p>
+               <p><input type="hidden" name="act" value="act_login" />
+                   <input type="hidden" name="back_act" value="./user.php" />
+                   <input type="submit" name="submit" value="登录" class="us_Submit"  /> &nbsp; &nbsp;
+                   <input type="button" name="button" value="重置" class="us_Submit"  /></p>
+           </form>
+       </div>
+       <div class="bg4" id="b4">
+           <form name="formLogin" action="#" method="post">
+               <p>帐 号 &nbsp; <input name="username" type="text"  class="inputBg" /></p>
+               <p style="margin-bottom:5px;">密 码 &nbsp; <input name="password" type="password"   class="inputBg"/></p>
+               <p style="margin-bottom:5px;"> <input type="checkbox" value="1" name="remember"/><label for="remember"> 请保存我这次的登录信息。</label></p>
+               <p><input type="hidden" name="act" value="act_login" />
+                   <input type="hidden" name="back_act" value="./user.php" />
+                   <input type="submit" name="submit" value="登录"  /> &nbsp; &nbsp;
+                   <input type="button" name="button" value="重置"  /></p>
+           </form>
+       </div>
+    </div>
+   </div>
+   <script>
+      jQuery.fn.tabs=function(){
+       var parent = this
+        parent.children(":first-child").children().children(":first-child").addClass("active")
+        parent.children(":last-child").children(":first-child").addClass("active1")
+        parent.children(":first-child").on("click","a",function(e){
+            e.preventDefault();
+            var $tar=$(e.target)
+            if(!$tar.parent().parent().is(".active")){
+                $tar.parent().parent().addClass("active")
+                .siblings().removeClass("active");
+                var id=$tar.parent().attr("data-target")
+                $(id).addClass("active1").siblings().removeClass("active1")
+            }
+        })
+       }
+       $(".loginbg").tabs()
+   </script>
+</body>
+</html>
+
+
+
+

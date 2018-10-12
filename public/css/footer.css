@@ -1,0 +1,43 @@
+a,b,u,i,li,hr,list,form,table,tr,td,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    text-decoration: none;
+}
+*{
+    font-family: "微软雅黑";
+
+}
+.my_img{
+    position: fixed;
+   top:350px;
+    right:0;
+    z-index: 50;
+}
+.my_color3{
+    color:#FFA800;
+}
+
+.linktext a{
+    color:#000000;
+    margin:5px;
+    font-size: 12px;
+}
+.abtext{
+    color:#9d9d9d;
+    font-size: 12px;
+}
+.bt_nav a{
+    font-size: 14px;
+    margin:10px;
+    color:#52BBED;
+}
+.my_color{
+    color:#52BBED !important;
+}

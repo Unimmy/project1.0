@@ -1,0 +1,179 @@
+.my_line_pos{
+    position: relative;
+    top:-25px;
+}
+.my_font_size2{
+    font-weight: bold;
+    font-size: 25px;
+}
+.my_font_size3{
+    font-size: 12px;
+}
+.my_list li a{
+    display:inline-block;
+    width:176px;
+    height:30px;
+    line-height: 30px;
+    margin:0 8px 8px 0;
+    background-color: #999;
+    color:white;
+}
+.my_list li a:hover{
+    background:#FFA800 !important;
+}
+.my_list_div ul li p{
+    position:relative;
+    display:none;
+    text-align: center;
+    color:white;
+    background:rgba(0,0,0,.8);
+    z-index: 10;
+    width:270px;
+
+}
+.my_list_div ul li:hover p{
+     display: block;
+     position:absolute;
+     top:245px;
+     line-height:30px;
+ }
+.vr_t{
+    position: relative;
+    background-image: url("../images/VRS.jpg");
+    height: 467px;
+}
+.txt1,.txt2,.txt3,.txt4,.txt5{
+    position: absolute;
+    z-index:10;
+    font-size:12px; 
+   
+}
+.txt1{
+    left:200px;
+    top:50px;
+    width:250px;
+}
+.txt2{
+    left:380px;
+    top:220px;
+    width:220px;}
+.txt3{
+    width:180px;
+    left:710px;
+    top:205px;
+}
+.txt4{
+    left:690px;
+    top:16px;
+    width:195px;
+}
+.txt5{
+    left:700px;
+    top:100px;
+    width:180px;;
+}
+.my_animation ul{
+    width:285px;
+    height:500px;
+    overflow:hidden;
+    border:1px solid #c6c8ca;
+
+}
+.my_animation ul li span{
+    color:#FF9900;
+    display: block;
+
+}
+.my_animation ul li{
+    color:#9d9d9d;
+    position: relative;
+    animation:mymove 35s linear infinite;
+    padding: 5px;
+}
+.my_animation ul:hover li{
+    animation-play-state:paused;
+}
+@keyframes mymove {
+from{top:0px;}
+    to{top:-1000px;}
+}
+.my_animation2{
+    height:312px;
+    width:350px;
+    border:1px solid #9d9d9d;
+    overflow: hidden;
+}
+.my_animation2 li{
+    position: relative;
+    animation:mymove1 25s linear infinite alternate;
+}
+.my_animation2:hover li{
+    animation-play-state:paused;
+}
+@keyframes mymove1 {
+    from{top:0px;}
+    to{top:-350px;}
+}
+.p_hidden{
+    display: none;
+    position: relative;
+}
+.my_p_block{
+    position: relative;
+}
+.my_p_block:hover .p_hidden{
+    display: block;
+    position: absolute;
+    top:64px;
+    left:10px;
+    z-index:50;
+    background:white;
+    width: 80px;
+}
+.p_hidden a{
+display: block;
+}
+.p_hidden a:hover{
+    background: #F59300;
+    color:white;
+}
+.my_rotate_img{
+    position:absolute;
+    left:37px;
+    transition: all .3s linear;
+}
+.my_p_block:hover .my_rotate_img{
+    transform: rotate(180deg);
+}
+.my_img_div1{
+    border-top:5px solid #FFA800;
+}
+
+.my_share_li ul li{
+    margin: 5px;
+}
+.my_hidden_img_hover{
+    position:fixed;
+    top:130px;
+    left:0;
+    transition: all .1s linear;
+    z-index: 10;
+}
+.my_hidden_img_hover:hover {
+    transform: translateX(118px);
+    z-index: 10;
+}
+.div_hidden{
+    display: none;
+    transition: all .1s linear;
+}
+.my_hidden_img_hover:hover .div_hidden{
+    display: block;
+    position: absolute;
+    left:-114px;
+}
+.my_color1{
+    background:rgba(0,0,0,.1);
+    font-weight: bold;
+}
+

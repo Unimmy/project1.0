@@ -1,0 +1,69 @@
+.loginbg{
+    background: url("../images/bg_20110815.jpg");
+    width: 1362px;
+    height:588px ;
+    margin: 0 auto;
+    position: relative;
+
+}
+ul>li{
+    padding: 0;
+    width: 204px;
+    height: 77px;
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+.imgs{
+    position:absolute ;
+    left: 312px;
+    top:123px;
+}
+.bg1,.bg2,.bg3,.bg4{
+    position:absolute ;
+    width: 447px;
+    height: 338px;
+    left:557px;
+    top:123px;
+    border-radius: 5px;
+    padding: 79px 55px 55px 55px;
+
+}
+input[type=text],input[type=password]{
+    width: 225px;
+    height:25px;
+}
+input[type=submit],input[type=button]{
+    width: 86px;
+    height: 35px;
+    border: 0;
+    background: rgba(20, 98, 216, 0.692);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+
+}
+.active{
+   border:1px solid #000;
+   box-shadow: 5px 5px 5px black
+}
+.active1{
+    z-index: 1;
+}
+.bg1{
+    background: url("../images/51.jpg") no-repeat;
+    
+}
+.bg2{
+    background: url("../images/52.jpg") no-repeat;
+
+}
+.bg3{
+    background: url("../images/53.jpg") no-repeat;
+
+}
+.bg4{
+    background: url("../images/54.jpg") no-repeat;
+
+}
