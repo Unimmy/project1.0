@@ -29,9 +29,14 @@ $(function(){
            for(var {p_imgurl_big,p_imgurl_small} of res){
                html+=`
              <div class="col-12 p-2 text-center" >
+             <div class="row diss"> 
+             <div id="fdj"></div>
+                 <div id="fdtp">
+                   <img src="${p_imgurl_big}">
+                 </div>
                <div class="row"> 
                     <div class="col-12 p-0 border border-dark">  
-                       <img src="${p_imgurl_big}" >
+                       <img src="${p_imgurl_big}" width="400" height="400">
                    </div>
                    <div class="col-12">
                        <div class="row p-0 d-flex justify-content-center mt-2">
@@ -41,9 +46,28 @@ $(function(){
                        </div>
                    </div> 
                </div>
-           </div>`
+           </div>
+           <script>
+           $(".diss").on("mouseenter",function(){
+                $("#fdj")[0].style.display="block";
+               $("#fdtp")[0].style.display="block";
+           })
+           $(".diss").on("mouseleave",function(){
+                $("#fdj")[0].style.display="";
+               $("#fdtp")[0].style.display="";
+           })
+           $(".diss").on("mousemove",function(e){
+               var x =e.offsetX-100;
+               var y = e.offsetY-100;
+               $("#fdj")[0].style.left=x+"px";
+               $("#fdj")[0].style.top=y+"px"
+               console.log(x,y)
+             
+           })
+       </script>
+           `
            }
-           $("#listimg2").append(html)   
+          $("#listimg2").append(html)   
         }
      
     })

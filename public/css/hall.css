@@ -2,7 +2,7 @@
     border-top:3px solid #FFA800;
 }
 .opca{ 
-    transition: all 0.5s linear 0s ;
+    transition:all 0.2s linear 0s ;
     opacity: 0.5;
 } 
 .opc{

@@ -23,7 +23,7 @@ $(function(){
                 </script>
                `
             }
-            $("#tu123").append(html)  
+             $("#tu123").append(html)  
         }
     })
     $.ajax({
@@ -39,7 +39,7 @@ $(function(){
             </div>
                `
             }
-            $(".images1").append(html)
+         $(".images1").append(html)
             var script=""
                script=` 
                 <script>
