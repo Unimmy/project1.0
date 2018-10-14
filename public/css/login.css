@@ -34,7 +34,7 @@ input[type=text],input[type=password]{
     width: 225px;
     height:25px;
 }
-input[type=submit],input[type=button]{
+input[type=submit],input[type=button],input[type=reset]{
     width: 86px;
     height: 35px;
     border: 0;

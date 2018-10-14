@@ -70,3 +70,9 @@
     border: 1px solid #333; }
 #banner ul li.on { background-color: #000; }
 #banner_list a { position: absolute; }
+.myimgs{
+    padding-left:29px;
+}
+.myimgs li{
+    padding: 2px;
+}
