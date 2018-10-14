@@ -27,27 +27,38 @@
    cursor: pointer;
  }
 /* 放大镜 */
-.diss{
-position: relative;
-
+.xs{
+    position: relative;
 }
 
  #fdj{
-    position: absolute;
+     position: absolute; 
      width:200px;
      height: 200px;
      background:rgba(0,0,0,.5);
-     z-index: 1;
      display: none;
+     top:0px;
+    z-index: -1;
  }
  #fdtp{
-    position: absolute;;
+     position: absolute;
     width:300px;
     height:300px;
     border:1px solid black;
     background: white;
-    left: 400px;
+    left:400px;
     overflow: hidden;
-    z-index: 1; 
+    z-index: 10000;
     display: none;
  }
+#fdtp>img{
+    position:relative;
+}
+.xs>div:first-child{
+    width:400px;
+    height:400px;
+    border:1px solid black;
+    background-repeat: no-repeat;
+    background-size:400px 400px;
+}
+
