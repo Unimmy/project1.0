@@ -21,15 +21,13 @@
          </div>
         <div>
        <div class="bg1" id="b1">
-           <form name="formLogin" action="" method="get">
                <p>帐 号 &nbsp; <input name="uname" type="text"  class="inputBg" /></p>
                <p style="margin-bottom:5px;">密 码 &nbsp; <input name="upwd" type="password"   class="inputBg"/></p>
                <p style="margin-bottom:5px;"> <input type="checkbox" value="1" name="remember" id="remember" /><label for="remember"> 请保存我这次的登录信息。</label></p>
                <p><input type="hidden" name="act" value="act_login" />
                    <input type="hidden" name="back_act" value="./user.php" />
-                   <input type="submit" name="submit" value="登录" class="us_Submit"/> &nbsp; &nbsp;
+                   <input type="button" name="submit" value="登录" class="us_Submit" id="us_Submit"/> &nbsp; &nbsp;
                    <input type="reset" name="button" value="重置" class="us_Submit"  /></p>
-           </form>
        </div>
        <div class="bg2" id="b2">
            <form name="formLogin"  method="post">
@@ -66,24 +64,7 @@
        </div>
     </div>
    </div>
-   <script>
-      jQuery.fn.tabs=function(){
-       var parent = this
-        parent.children(":first-child").children().children(":first-child").addClass("active")
-        parent.children(":last-child").children(":first-child").addClass("active1")
-        parent.children(":first-child").on("click","a",function(e){
-            e.preventDefault();
-            var $tar=$(e.target)
-            if(!$tar.parent().parent().is(".active")){
-                $tar.parent().parent().addClass("active")
-                .siblings().removeClass("active");
-                var id=$tar.parent().attr("data-target")
-                $(id).addClass("active1").siblings().removeClass("active1")
-            }
-        })
-       }
-       $(".loginbg").tabs()
-   </script>
+ 
    <script src="js/login.js"></script>
 </body>
 </html>

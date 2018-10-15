@@ -29,41 +29,35 @@ $(function(){
            for(var {p_imgurl_big,p_imgurl_small,p_imgurl} of res){
                html+=`
             <div class="col-12 p-2 text-center" >
-            <div class="row diss"> 
-            <div class="xs">
-                <div class="col-12 p-0"></div>  
-                <div id="fdj"></div>
+                <div class="row xs border border-dark">
+                    <div id="fdj"></div>
+                    <div id="mask"></div>
+                    <img src="${p_imgurl}" width="390" height="390" >
+                </div> 
+                <div id="fdtp"><img src="${p_imgurl_big}" width="800" height="800"></div>
             </div>
-            <div id="fdtp">
-                <img src="${p_imgurl_big}" width="800" height="800">
-            </div>
-                <div class="col-12">
+            <div class="col-12 xm">
                 <div class="row p-0 d-flex justify-content-center mt-2">
                     <div class="col-4"><input type="button" class="btn btn-outline-dark  inputs" value="<" ></div>
                     <div class="col-4 p-0"><img src="${p_imgurl_small}" width="30" height="50" class="border border-dark" ></div>
                     <div class="col-4 "><input type="button" class="btn btn-outline-dark  inputs" value=">"></div>
                 </div>
-            </div> 
-            </div>
             <script>
-            $(".xs>div:first-child").css("background-image","url(${p_imgurl})");
-            $(".xs").hover(function(){
+            $("#mask").mousemove(function(){
                 $("#fdj").css("display","block")
-                $("#fdtp").css("display","block")
-            }).mousemove(function(e){
-                var left= e.offsetX-100;
-                var top= e.offsetY-100;
-                if(left<0) top=0 ; else if(left>300) left=300;
-                if(top<0) left=0; else if(top>300) top=300;
-                $("#fdtp>img").css("left",-2*left+"px");
-                $("#fdtp>img").css("top",-2*top+"px");
-                $("#fdj").css({left,top})
-                console.log(e.offsetX,e.offsetY)
-            })
-            
+                $("#fdtp").css("display","block")  
+                }).on("mousemove",function(e){
+                    var left= e.offsetX-100;
+                    var top= e.offsetY-100;
+                    if(left<0) left=0 ; else if(left>200) left=200;
+                    if(top<0) top=0; else if(top>200) top=200;
+                    $("#fdtp>img").css("left",-2*left+"px");
+                    $("#fdtp>img").css("top",-2*top+"px");
+                    $("#fdj").css({left,top})
+                })
             $(".xs").on("mouseleave",function(){
-                $("#fdj")[0].style.display="";
-                $("#fdtp")[0].style.display="";
+                $("#fdj").css("display","none")
+                $("#fdtp").css("display","none")
             })
         </script>
            `
