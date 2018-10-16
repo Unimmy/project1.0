@@ -1,0 +1,38 @@
+.container{
+    background: url("../images/bg_20110815.jpg");
+    width: 1362px;
+    height:588px ;
+    margin: 0 auto;
+    position: relative;
+}
+.fff{
+    width:1362px;
+    height:350px;
+    background: linear-gradient(to bottom,#03030D ,#772F47);
+    position: absolute;
+    top:115px;
+    left:0px;
+    padding-top:200px;
+}
+.formd{
+    text-align: center; 
+    width: 400px;
+    position: absolute;
+    top:115px;
+    left:485px;
+    border:1px solid #7A5F6C;
+    background: rgba(255,255,255,.3);
+    border-radius:5px;
+    box-shadow: 0 5px 5px 0  #000;
+}
+#btn{
+    cursor: pointer;
+    border:0;
+    margin-left:50px; 
+    width:150px;
+    height: 30px;
+    background: rgba(255,255,255,.3);
+}
+.formd>p span{
+    position: absolute;
+}

@@ -6,7 +6,7 @@ router.get("/product_details",(req,res)=>{
     var sql = "SELECT `id`, `pid`, `p_imgurl`, `ptitle`, `p_imgurl_big`, `p_imgurl_small` FROM `pro_products` WHERE pid=?"
     pool.query(sql,[pid],(err,result)=>{
         if(err) throw err
-        res.send(result)
+        res.send({code:200,msg:result})
     })    
 })
 

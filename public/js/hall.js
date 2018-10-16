@@ -3,9 +3,9 @@ $(function(){
         url:"http://127.0.0.1:3000/hall/imgs",
         type:"get",
         success:function(res){
+            var msg=res.msg
             var html ="";
-          
-            for(var {img_url,title,id,img_url1} of res){
+            for(var {img_url,title,id,img_url1} of msg){
                 html+=`
                 <div class="col-2">
                    <a href="http://127.0.0.1:3000/details.html?id=${id}"> <img src="${img_url}" alt="" title="${title}"></a>
@@ -30,8 +30,9 @@ $(function(){
         url:"http://127.0.0.1:3000/hall/products",
         type:"get",
         success:function(res){
+            var msg=res.msg
             var html ="";
-            for(var {p_imgurl,ptitle,pid} of res){
+            for(var {p_imgurl,ptitle,pid} of msg){
                 html+=`
                 <div class="col-3 border border-light">
                 <a href="http://127.0.0.1:3000/details.html?pid=${pid}"> <img src="${p_imgurl}" alt="${ptitle}">

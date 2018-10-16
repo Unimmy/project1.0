@@ -1,18 +1,22 @@
 $(function(){  
-   
-    $.ajax({
-        url:`http://127.0.0.1:3000/login/?uname=jane&upwd=123456`,
-        type:"get",
-        success:function(res){
-            //利用sessionstorage存储获取的用户名
-             sessionStorage.setItem("username",res[0].uname)
-            $("#us_Submit").click(function(){
-               location.href="http://127.0.0.1:3000/index.html"
-            })     
-        }       
-    })         
-     
-  
+    $("#us_Submit").click(function(){
+        var uname=$("#uname").val()
+        var upwd=$("#upwd").val();
+        $.ajax({
+            url:`http://127.0.0.1:3000/login/`,
+            type:"post",
+            data:`uname=${uname}&upwd=${upwd}`,
+            success:function(res){
+                //利用storage存储获取的用户名
+                if(res.code!=0){
+                     sessionStorage.setItem("username",res.msg[0].uname)
+                     location.href="http://127.0.0.1:3000/index.html"  
+                }else{
+                    alert(res.msg)
+                }   
+            }       
+        }) 
+    })
 })
 //侵入式选项卡
 jQuery.fn.tabs=function(){

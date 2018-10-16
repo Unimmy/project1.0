@@ -4,8 +4,9 @@ $(function(){
         url:"http://127.0.0.1:3000/details/product_details?"+pid,
         type:"get",
         success:function(res){ 
+            var msg=res.msg
             var html="";
-            for(var {p_imgurl_big,p_imgurl_small,ptitle} of res){
+            for(var {p_imgurl_big,p_imgurl_small,ptitle} of msg){
                 html+=`
                 <div class="row border border-secondary" >
                 <div class="col-12 ">
@@ -26,7 +27,7 @@ $(function(){
            $("#listtitle").append(html)
 
          var html="";
-           for(var {p_imgurl_big,p_imgurl_small,p_imgurl} of res){
+           for(var {p_imgurl_big,p_imgurl_small,p_imgurl} of msg){
                html+=`
             <div class="col-12 p-2 text-center" >
                 <div class="row xs border border-dark">

@@ -24,8 +24,9 @@
     <img src="images/l4.gif" height="88" width="24">
 </div>
     <header>
-        <div style="padding-left:21%; width: 100% ;background: bisque" id="ssss">
+        <div style="padding-left:21%; width: 100% ;background: #ddd" id="ssss">
             用户您好!请<a href="http://127.0.0.1:3000/login.html" style="text-decoration: underline; color:blue">登录</a>
+            没有账号? <a href="http://127.0.0.1:3000/register.html"  style="text-decoration: underline; color:blue">请注册</a>
         </div>
         <div class="container " style="width:1920px">
             <div class="row">
@@ -88,16 +89,13 @@
     </header>
     <script>
       var sess =sessionStorage.getItem("username")
+      console.log(sess)
         if(sess){
-          
-           var s=$("#ssss").html(
-            `${sess}您好! <a href="javascript:sessionStorage.removeItem('username')">退出登录</a>`)
-            
-            
-            console.log(s)
+          $("#ssss").html(
+            `${sess}您好! <a href='javascript:sessionStorage.removeItem("username");location.href="index.html"'>退出登录</a>`)
         }
-
     </script>
+       
 
 
 
