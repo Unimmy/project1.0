@@ -22,7 +22,8 @@ $(function(){
      $("#upwd1").blur(function(){
         var data1 = $("#upwd").val()
         var data2 = $("#upwd1").val()
-       if(data1==data2){
+        if(data1==null){return}
+        else if(data1==data2){
            $("#yz11").html("密码正确")
        }else{
          $("#yz11").html("密码错误,请从新输入")

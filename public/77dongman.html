@@ -75,16 +75,16 @@
 
     <div>
         <div class=" col-12 my_bg_img">
-            <form action="#">
-                <p class="mt-1 mb-1">姓名: <input type="text" name="uname"></p>
-                <p class="mt-1 mb-1">电话: <input type="text" maxlength="11" name="tel"></p>
-                <p class="mt-1 mb-1">Q Q: <input type="text" maxlength="12" name="qq"></p>
-                <p class="mt-1 mb-1"> 邮箱: <input type="email" name="uemail"></p>
+            <form>
+                <p class="mt-1 mb-1">姓名: <input type="text" name="uname"id="s1"><span style="color:red; margin-left:5px">*</span>请填写您的真实姓名 </p>
+                <p class="mt-1 mb-1">电话: <input type="text" maxlength="11" name="tel" id="s2"><span style="color:red; margin-left:5px">*</span>请填写您的真实电话</p>
+                <p class="mt-1 mb-1">Q Q: <input type="text" maxlength="12" name="qq" id="s3"><span style="margin-left:5px"></span>加盟资料将发送到您的邮箱请填写正确信息</p>
+                <p class="mt-1 mb-1"> 邮箱: <input type="email" name="uemail" id="s4"><span style="margin-left:5px"></span>我们将提供详细项目 </p>
                 <p class="mt-1 mb-1">留言:</p>
-                <p class="ml-5"><textarea name="liuyan" id="" cols="40" rows="4"></textarea></p>
+                <p class="ml-5 lyb"><textarea name="liuyan" cols="40" rows="4" placeholder="最多输入120字" maxlength="120" id="s5"></textarea></p>
                 <p>
-                    <input type="submit" class="btn btn-primary" value="提交">
-                    <input type="button" class="btn btn-danger" value="下载加盟资料">
+                    <input type="button" class="btn btn-primary" id="btn" value="提交">
+                    <input type="button" class="btn btn-danger" id="btn2" value="下载加盟资料" disabled>
                 </p>
             </form>
         </div>
@@ -93,5 +93,6 @@
 <footer id="footer" class="container"></footer>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/connect.js"></script>
 </body>
 </html>

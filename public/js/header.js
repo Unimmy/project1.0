@@ -9,5 +9,5 @@ $(function(){
             $(res).replaceAll("#header");
             }
         })
-      
+   
 })

@@ -20,6 +20,7 @@
 }
 
 /*轮播图*/
+/*轮播图*/
 #banner{
     position: relative;
     width:100% ;
@@ -29,28 +30,6 @@
 #banner_list img {
     border: 0px;
 }
-#banner_bg {
-    position: absolute;
-    bottom: 0;
-    background-color: #000;
-    height: 30px;
-    filter: Alpha(Opacity=30);
-    opacity: 0.3;
-    z-index: 1000;
-    cursor: pointer;
-    width: 478px; }
-#banner_info { position: absolute;
-    bottom: 0; left: 5px;
-    height: 22px;
-    color: #fff;
-    z-index: 1001;
-    cursor: pointer }
-#banner_text {
-    position: absolute;
-    width: 120px;
-    z-index: 10;
-    right: 3px;
-    bottom: 3px; }
 #banner ul { position: absolute;
     list-style-type: none;
     filter: Alpha(Opacity=80);
@@ -70,9 +49,3 @@
     border: 1px solid #333; }
 #banner ul li.on { background-color: #000; }
 #banner_list a { position: absolute; }
-.myimgs{
-    padding-left:29px;
-}
-.myimgs li{
-    padding: 2px;
-}

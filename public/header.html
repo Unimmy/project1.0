@@ -1,30 +1,40 @@
 
-    <!--右侧固定小脑斧-->
+<!--右侧固定小脑斧-->
 <a href="#"><img src="images/2018_qq.gif" height="134" width="134" class="my_img"/></a>
+<!-- 老虎盒子隐藏,点击显示 ,实时对话聊天功能,暂未开放 -->
+<div id="tiggerbox"></div>
 <!--左侧固定分享-->
 <div class="d-flex my_hidden_img_hover ">
-    <div class="div_hidden bg-light ">
+    <div class="div_hidden ">
         <p class=" my_color1">分享到</p>
-      <div class="d-flex my_share_li">
-        <ul class="pl-0 pr-3">
-            <li><a href="">1111</a></li>
-            <li><a href="">1111</a></li>
-            <li><a href="">1111</a></li>
-            <li><a href="">1111</a></li>
-        </ul>
-        <ul class="pl-0">
-            <li><a href="">2222</a></li>
-            <li><a href="">2222</a></li>
-            <li><a href="">2222</a></li>
-            <li><a href="">2222</a></li>
-        </ul>
-      </div>
-    </div>
+                <ul  class="p-3" style="width: 226px;">
+                    <li class="pl-2"><a href="#" >QQ空间</a></li>
+                    <li class="pl-2"><a href="#" >新浪微博</a></li>
+                    <li class="pl-2"><a href="#">百度云收藏</a></li>
+                    <li class="pl-2"><a href="#" >微 信</a></li>
+                    <li class="pl-2"><a href="#">人 人 网</a></li>
+                    <li class="pl-2"><a href="#" >腾讯微博</a></li>
+                    <li class="pl-2"><a href="#">百度相册</a></li>
+                    <li class="pl-2"><a href="#">开 心 网</a></li>
+                    <li class="pl-2"><a href="#" >腾讯朋友</a></li>
+                    <li class="pl-2"><a href="#" >百度贴吧</a></li>
+                    <li class="pl-2"><a href="#">豆瓣网</a></li>
+                    <li class="pl-2"><a href="#">百度新首页</a></li>
+                    <li class="pl-2"><a href="#">QQ好友</a></li>
+                    <li class="pl-2"><a href="#" >和讯微博</a></li>
+                    <li class="pl-2"><a href="#" >百度中心</a></li>
+                </ul>
+            <div class="bdshare-slide-bottom" style="width:226px;">
+                <a href="#" onclick="return false;" class="slide-more" data-cmd="more">更多...</a>
+            </div>
+  
+        </div>
+            
    
     <img src="images/l4.gif" height="88" width="24">
 </div>
     <header>
-        <div style="padding-left:21%; width: 100% ;background: #ddd" id="ssss">
+        <div style="padding-left:21%; width: 100% ;" id="ssss">
             用户您好!请<a href="http://127.0.0.1:3000/login.html" style="text-decoration: underline; color:blue">登录</a>
             没有账号? <a href="http://127.0.0.1:3000/register.html"  style="text-decoration: underline; color:blue">请注册</a>
         </div>
@@ -87,16 +97,13 @@
         </div>
        
     </header>
-    <script>
-      var sess =sessionStorage.getItem("username")
-      console.log(sess)
-        if(sess){
-          $("#ssss").html(
-            `${sess}您好! <a href='javascript:sessionStorage.removeItem("username");location.href="index.html"'>退出登录</a>`)
-        }
-    </script>
-       
-
+<script>    
+    var sess =sessionStorage.getItem("username")
+    if(sess){
+            $("#ssss").html(
+        `${sess}您好! <a href='javascript:sessionStorage.removeItem("username");location.href="index.html"'>退出登录</a>`)
+    }
+</script>
 
 
 

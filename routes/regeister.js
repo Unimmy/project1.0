@@ -4,14 +4,11 @@ const pool = require("../pool")
 
 router.post('/select',(req,res)=>{
     var uname= req.body.uname
-    console.log(uname)
     if(!uname){ res.send({code:0,msg:"请输入用户名"}) ;return}
     var sql = "select * from pro_user where uname=?"
     pool.query(sql,[uname],(err,result)=>{
         if(err) throw  err  
-        console.log(result)
         if(result.length>0){
-            console.log(result)
              res.send({code:0,msg:"用户名已存在"})   
         }else{
             res.send({code:1,msg:"用户名可用"})
@@ -21,7 +18,6 @@ router.post('/select',(req,res)=>{
 
 router.post('/add',(req,res)=>{
     var {uname,upwd,email,phone} = req.body
-    console.log(req.body)
     if(!uname){ res.send({code:0,msg:"请输入用户名"}) ;return}
     if(!upwd){ res.send({code:0,msg:"请输入密码"}) ;return}
     if(!email){ res.send({code:0,msg:"请输入邮箱"}) ;return}

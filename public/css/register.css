@@ -8,18 +8,20 @@
 .fff{
     width:1362px;
     height:350px;
-    background: linear-gradient(to bottom,#03030D ,#772F47);
+    background: url(../images/bglswl.jpg)  no-repeat;
+    background-size: 100% 100%;
+    /* background: linear-gradient(to bottom,#03030D ,#772F47); */
     position: absolute;
     top:115px;
     left:0px;
     padding-top:200px;
 }
 .formd{
-    text-align: center; 
-    width: 400px;
+    text-align: left; 
+    width: 450px;
     position: absolute;
     top:115px;
-    left:485px;
+    left:150px;
     border:1px solid #7A5F6C;
     background: rgba(255,255,255,.3);
     border-radius:5px;
@@ -35,4 +37,7 @@
 }
 .formd>p span{
     position: absolute;
+}
+.formd>p{
+    margin-left:70px
 }

@@ -8,31 +8,17 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
-
 <!--头部-->
 <header id="header" class="container">
 </header>
-
 <!--头导航下面的第一张大图,该图为轮播图-->
-
-
-    <!--<a href="#"><img src="images/index_20170303_2.jpg" height="490" width="1920" /></a>-->
 <div class="container-fluid my_img_div1">
 <div id="banner" >
         <ul>
-            <li class="on">
-                1
-            </li>
-            <li>
-                2
-            </li>
-            <li>
-                3
-            </li>
-            <li>
-                4
-            </li>
+            <li class="on">1</li>
+            <li>2</li>  
+            <li>3</li>
+            <li>4</li>  
         </ul>
         <div id="banner_list">
             <a href="#" target="_blank"><img src="images/index_20170303_2.jpg" title="jquery插件库1" alt="jquery插件库1"></a>
@@ -384,10 +370,10 @@
                 <div class="col-12">&nbsp;</div>
                 <!--店长-->
                 <div clas="col-12"><a href=""><img src="images/pople_dz.png" height="44" width="780"/></a></div>
-                <div class="col-3"><a href=""><img src="images/1001.jpg" height="223" width="185"/><br>[ 优秀动漫店长 ]</a></div>
-                <div class="col-3"><a href=""><img src="images/2(2).jpg" height="223" width="185"/><br>[ 优秀动漫店长 ]</a></div>
-                <div class="col-3"><a href=""><img src="images/3(1).jpg" height="223" width="185"/><br>[ 优秀动漫店长 ]</a></div>
-                <div class="col-3"><a href=""><img src="images/1002.jpg" alt=""><br>[ 优秀动漫店长 ]</a></div>
+                <div class="col-3"><a href=""><img src="images/1.1.jpg" /><br>[ 优秀动漫店长 ]</a></div>
+                <div class="col-3"><a href=""><img src="images/2.2.jpg" /><br>[ 优秀动漫店长 ]</a></div>
+                <div class="col-3"><a href=""><img src="images/3.3 (1).jpg" /><br>[ 优秀动漫店长 ]</a></div>
+                <div class="col-3"><a href=""><img src="images/s4 (1).jpg"><br>[ 优秀动漫店长 ]</a></div>
             </div>
         </div>
         <div class="col-4">
@@ -437,40 +423,6 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
-<script>
-      var t = n = 0,count;
-    $(document).ready(function() {
-        count = $("#banner_list a").length;
-        $("#banner_list a:not(:first-child)").hide();
-        $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
-        $("#banner_info").click(function() {
-            window.open($("#banner_list a:first-child").attr('href'), "_blank")
-        });
-        $("#banner li").click(function() {
-            var i = $(this).text() - 1;
-            n = i;
-            if (i >= count) return;
-            $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
-            $("#banner_info").unbind().click(function() {
-                window.open($("#banner_list a").eq(i).attr('href'), "_blank")
-            })
-            $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
-            document.getElementById("banner").style.background = "";
-            $(this).toggleClass("on");
-            $(this).siblings().removeAttr("class");
-        });
-        t = setInterval("showAuto()", 4000);
-        $("#banner").hover(function() {
-                clearInterval(t)
-            },
-            function() {
-                t = setInterval("showAuto()", 4000);
-            });
-    })
-    function showAuto(){
-        n = n >= (count - 1) ? 0 : ++n;
-        $("#banner li").eq(n).trigger('click');
-    }
-</script>
+<script src="js/banner.js"></script>
 </body> 
 </html>

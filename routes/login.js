@@ -9,7 +9,6 @@ router.post('/',(req,res)=>{
     var sql = "SELECT `uid`, `uname`, `upwd` FROM `pro_user` WHERE uname=? AND upwd=md5(?)"
     pool.query(sql,[uname,upwd],(err,result)=>{
         if(err) throw  err;
-        console.log(sql)
         if(result.length>0){
              res.send({code:1,msg:result}) 
         }else{

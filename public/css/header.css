@@ -1,5 +1,6 @@
 body{
-    width:100%
+    width:100%;
+  
 }
 a{
   color:#000000;
@@ -44,7 +45,9 @@ display: block;
 }
 .my_img_div1{
     border-top:5px solid #FFA800;
-
+    padding:0;
+    width:1900px;
+    overflow: hidden;
 }
 
 .my_share_li ul li{
@@ -64,13 +67,33 @@ display: block;
 .div_hidden{
     display: none;
     transition: all .1s linear;
+    background: url(../images/mm.jpg);
+    background-position: 40% 70%;
+    font-size: 18px;
+   
+    color:white;
+
 }
 .my_hidden_img_hover:hover .div_hidden{
     display: block;
     position: absolute;
-    left:-114px;
+    left:-118px;
 }
 .my_color1{
     background:rgba(0,0,0,.1);
     font-weight: bold;
+}
+/* 老虎盒子隐藏,点击显示 ,实时对话聊天功能,暂未开放*/
+#tiggerbox{
+    width:500px;
+    height:600px;
+    border:1px solid black;
+    z-index: 100000;
+    position: fixed;
+    left:35%;
+    top:30%;
+    display:none;
+ }
+#ssss{
+    background: rgba(0,0,0,.2);
 }
