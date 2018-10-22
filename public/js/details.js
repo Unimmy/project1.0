@@ -22,6 +22,16 @@ $(function(){
                    <input type="text" name="sousuo"><input type="button">
                 </div> 
                 </div>
+                <script>
+                $(".inputbg input[type=button]").click(function(){
+                      var val= $(".inputbg input[type=text]").val()
+                      if(val){
+                        sessionStorage.setItem("skeywords",val)
+                     
+                      }
+                      
+                })
+                </script>
                 `
             }
            $("#listtitle").append(html)
@@ -37,12 +47,7 @@ $(function(){
                 </div> 
                 <div id="fdtp"><img src="${p_imgurl_big}" width="800" height="800"></div>
             </div>
-            <div class="col-12 xm">
-                <div class="row p-0 d-flex justify-content-center mt-2">
-                    <div class="col-4"><input type="button" class="btn btn-outline-dark  inputs" value="<" ></div>
-                    <div class="col-4 p-0"><img src="${p_imgurl_small}" width="30" height="50" class="border border-dark" ></div>
-                    <div class="col-4 "><input type="button" class="btn btn-outline-dark  inputs" value=">"></div>
-                </div>
+           
             <script>
             $("#mask").mousemove(function(){
                 $("#fdj").css("display","block")
@@ -69,3 +74,4 @@ $(function(){
     })
   
 })
+

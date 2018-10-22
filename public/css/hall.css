@@ -8,9 +8,12 @@
 .opc{
     opacity: 1;
 }
+#tu123 img{
+    transition: all 0.5s linear 0s ;
+}
 #tu123 img:hover{
     transform: rotate(360deg);
-    transition: all 0.5s linear 0s ;  
+    /* transition: all 0.5s linear 0s ;   */
 }
 #tu123 a{
     display: inline-block;

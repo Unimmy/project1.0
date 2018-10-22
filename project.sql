@@ -11,7 +11,7 @@
  Target Server Version : 100119
  File Encoding         : 65001
 
- Date: 14/10/2018 16:56:42
+ Date: 20/10/2018 15:18:31
 */
 
 SET NAMES utf8mb4;
@@ -115,16 +115,45 @@ CREATE TABLE `pro_user`  (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `uname` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `upwd` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`uid`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pro_user
 -- ----------------------------
-INSERT INTO `pro_user` VALUES (1, 'tom', '202cb962ac59075b964b07152d234b70');
-INSERT INTO `pro_user` VALUES (2, 'jerry', '202cb962ac59075b964b07152d234b70');
-INSERT INTO `pro_user` VALUES (3, 'dongdong', '202cb962ac59075b964b07152d234b70');
-INSERT INTO `pro_user` VALUES (4, 'jim', '123456');
-INSERT INTO `pro_user` VALUES (5, 'jane', 'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO `pro_user` VALUES (1, 'tom', 'e10adc3949ba59abbe56e057f20f883e', 'tom@163.com', '13800138000', NULL);
+INSERT INTO `pro_user` VALUES (2, 'jerry', 'e10adc3949ba59abbe56e057f20f883e', 'jerry@163.com', '13800138001', NULL);
+INSERT INTO `pro_user` VALUES (3, 'dongdong', 'e10adc3949ba59abbe56e057f20f883e', 'dongdong@qq.com', '13800138002', NULL);
+INSERT INTO `pro_user` VALUES (4, 'jim', 'e10adc3949ba59abbe56e057f20f883e', 'jim@outlook.com', '13800138003', NULL);
+INSERT INTO `pro_user` VALUES (5, 'jane', 'e10adc3949ba59abbe56e057f20f883e', 'jane@sina.com', '13800138004', NULL);
+
+-- ----------------------------
+-- Table structure for pro_user_download_res
+-- ----------------------------
+DROP TABLE IF EXISTS `pro_user_download_res`;
+CREATE TABLE `pro_user_download_res`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `tel` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `qq` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `uemail` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `liuyan` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of pro_user_download_res
+-- ----------------------------
+INSERT INTO `pro_user_download_res` VALUES (1, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (2, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (3, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (4, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (5, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (6, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (7, NULL, '', '', NULL, '');
+INSERT INTO `pro_user_download_res` VALUES (8, NULL, '123456497', '1231231231', NULL, 'dasdasdasdas');
 
 SET FOREIGN_KEY_CHECKS = 1;
