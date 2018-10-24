@@ -63,7 +63,7 @@ $(function(){
                 console.log(res)
                 if(res.code==1){
                 alert(res.msg);
-                sessionStorage.setItem("uname",res.data)
+                sessionStorage.setItem("username",res.data)
                location.href="index.html"
             }else{
                 alert(res.msg)
